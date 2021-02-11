@@ -11,19 +11,7 @@ app.use(express.static("public"));
 
 // DATA
 // reservation list
-const reservations = [
-  {
-    name: "Person One",
-    partySize: 4,
-  },
-];
 // wait list
-const waitList = [
-  {
-    name: "Waitlist One",
-    partySize: 2,
-  },
-];
 
 // reservation routes
 // GET /api/reservations - gives back an array of reservations
