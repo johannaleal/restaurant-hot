@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 4500;
 
 app.use(express.static("public"));
 
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // DATA - Loreto
 // reservation list
 const reservations = [
@@ -33,6 +37,12 @@ app.get("/api/reservations", (req, res) => res.json(reservations));
 app.get("/api/waitlist", (req, res) => res.json(waitList));
 
 // POST /api/reservations - creates a new reservation
+app.post("/api/reservations", (req, res) => {
+  const newReservation = req.body;
+
+  reservations.push(newReservation);
+  res.json(newReservation);
+});
 
 // frontend routes - Johanna
 // GET / - loads the index.html
