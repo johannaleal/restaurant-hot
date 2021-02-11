@@ -39,9 +39,19 @@ app.get("/api/waitlist", (req, res) => res.json(waitList));
 // POST /api/reservations - creates a new reservation
 app.post("/api/reservations", (req, res) => {
   const newReservation = req.body;
+  //make sure we only get name and partySize from the input
+	let newRes = { 
+		name: newReservation.name,
+		partySize: newReservation.partySize
+	};
 
-  reservations.push(newReservation);
-  res.json(newReservation);
+	if (reservations.length < 4) {
+		reservations.push(newRes);
+		res.json(reservations);
+	} else {
+		waitList.push(newRes);
+		res.json(waitList);
+	}
 });
 
 // frontend routes - Johanna
