@@ -7,13 +7,21 @@ const app = express();
 // setup a port
 const PORT = process.env.PORT || 4500;
 
-// link to array variables that will hold data
+app.use(express.static("public"));
 
-// routes
-    // set up routes for getting table data
+// DATA
+// reservation list
+// wait list
 
-    // set up routes for posting table data
+// reservation routes
+// GET /api/reservations - gives back an array of reservations
+// POST /api/reservations - creates a new reservation
+// GET /api/waitlist - gives back waitlisted reservations
 
+// frontend routes
+// GET / - loads the index.html
+// GET /reservations - load reservations html
+// GET /reservations/new - load makeReservations.html
 
 // start the server listening for requests
 app.listen(PORT, () => {
