@@ -1,1 +1,0 @@
-// add the reservation data to the reservations page when the page loads
