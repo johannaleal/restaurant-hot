@@ -6,9 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-
+    <script src="https://kit.fontawesome.com/ab6149c4a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Reservation Form</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4"><i class="fas fa-utensils"></i> HOT RESTAURANT</h1>
+            <p class="lead">
+                <a class="btn btn-primary" href="reservationviews.html" role="button">View Tables</a>
+            </p>
+            </div>
+        </div>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="input" class="form-control" id="name">
+                </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="phone">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+              </div>
+            </div>
+          </form>
+    </div>
+
 </body>
 </html>
